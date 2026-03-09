@@ -1,0 +1,69 @@
+@import 'variables';
+@import 'mixins';
+
+// Navbar personalizada
+.navbar {
+    background-color: $dark !important;
+    border-bottom: 3px solid $primary;
+
+    .navbar-brand {
+        letter-spacing: 1px;
+        &:hover { color: lighten($primary, 20%); }
+    }
+
+    .nav-link {
+        @include smooth-transition;
+        &:hover { transform: translateY(-2px); color: $white !important; }
+    }
+}
+
+// Tarjetas de Post (Estructura dinámica)
+.post-card {
+    border-radius: $border-radius-lg;
+    @include custom-shadow;
+    
+    .card-body {
+        padding: $spacer * 1.5;
+    }
+
+    .image-placeholder-custom {
+        background: linear-gradient(135deg, darken($light, 5%), $light);
+        min-height: 180px;
+        @include flex-center;
+        
+        i {
+            @include smooth-transition;
+            color: $secondary;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        .image-placeholder-custom i {
+            transform: scale(1.2) rotate(5deg);
+            color: $primary;
+        }
+    }
+}
+
+// Botones personalizados
+.btn-primary {
+    @include smooth-transition;
+    border-radius: $border-radius;
+    font-weight: 600;
+    
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}
+
+// Animaciones Globales
+@keyframes slideInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.main-container {
+    animation: slideInUp 0.6s ease-out;
+}

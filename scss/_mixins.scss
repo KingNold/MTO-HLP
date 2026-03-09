@@ -1,0 +1,27 @@
+// Centrado absoluto con Flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Sombra personalizada con efecto hover
+@mixin custom-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: $transition-base;
+    
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Transición suave paramétrica
+@mixin smooth-transition($property: all) {
+    transition: $property 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Placeholder para herencia (@extend)
+%no-select {
+    user-select: none;
+    -webkit-user-drag: none;
+}

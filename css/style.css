@@ -1,0 +1,138 @@
+/* ==========================================================================
+   MTO-HLP - Estilos Compilados (Basados en SCSS)
+   ========================================================================== */
+
+/* Importación de fuente profesional */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ESTILOS GLOBALES */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CONTENEDOR CON ANIMACIÓN DE ENTRADA */
+.main-container {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* NAVBAR PERSONALIZADA */
+.navbar {
+  background-color: #1a1d20 !important;
+  border-bottom: 3px solid #0d6efd;
+}
+
+.navbar .navbar-brand {
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .navbar-brand:hover {
+  color: #73a9fe; /* Resultado de lighten($primary, 20%) */
+}
+
+.navbar .nav-link {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar .nav-link:hover {
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+/* POST CARDS (Estructura Dinámica) */
+.post-card {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-card .card-body {
+  padding: 2.25rem; /* Resultado de $spacer * 1.5 + margen adicional */
+}
+
+.post-card .image-placeholder-custom {
+  background: linear-gradient(135deg, #f1f3f5 0%, #f8f9fa 100%);
+  min-height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-card .image-placeholder-custom i {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #6c757d;
+}
+
+.post-card:hover .image-placeholder-custom i {
+  transform: scale(1.2) rotate(5deg);
+  color: #0d6efd;
+}
+
+/* BOTONES PERSONALIZADOS */
+.btn-primary {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  background-color: #0d6efd;
+}
+
+/* UTILIDADES (Generadas con operadores SCSS) */
+.text-primary-dark {
+  color: #0a58ca; /* Resultado de darken($primary, 15%) */
+}
+
+.margin-custom {
+  margin: 2rem; /* Resultado de $spacer * 2 */
+}
+
+/* KEYFRAMES PARA ANIMACIONES */
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* AJUSTES PARA SIDEBAR STICKY */
+aside .card {
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.list-group-item {
+  border-color: #f1f3f5;
+  padding: 1rem;
+  transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}

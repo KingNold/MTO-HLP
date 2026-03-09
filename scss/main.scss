@@ -1,0 +1,28 @@
+// 1. Configuraciones base
+@import 'variables';
+@import 'mixins';
+
+// 2. Estilos globales (Reset)
+body {
+    font-family: $font-main;
+    background-color: $light;
+    color: darken($secondary, 30%);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// 3. Componentes específicos
+@import 'components';
+
+// 4. Utilidades rápidas (Operadores)
+.text-primary-dark {
+    color: darken($primary, 15%);
+}
+
+.margin-custom {
+    margin: $spacer * 2; // Uso de operadores aritméticos
+}
