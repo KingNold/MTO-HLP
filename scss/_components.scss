@@ -7,6 +7,8 @@
     border-bottom: 3px solid $primary;
 
     .navbar-brand {
+        color: $primary !important;
+        font-weight: 800;
         letter-spacing: 1px;
         &:hover { color: lighten($primary, 20%); }
     }
@@ -29,14 +31,15 @@
     .image-placeholder-custom {
         background: linear-gradient(135deg, darken($light, 5%), $light);
         min-height: 180px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
         @include flex-center;
         
         i {
             @include smooth-transition;
             color: $secondary;
+            font-size: 3rem;
         }
     }
 
