@@ -29,6 +29,9 @@
     .image-placeholder-custom {
         background: linear-gradient(135deg, darken($light, 5%), $light);
         min-height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include flex-center;
         
         i {
