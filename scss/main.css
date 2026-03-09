@@ -1,0 +1,97 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  color: rgb(37.0815450644, 40.1716738197, 42.9184549356);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  background-color: #1a1d20 !important;
+  border-bottom: 3px solid #0d6efd;
+}
+.navbar .navbar-brand {
+  color: #0d6efd !important;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.navbar .navbar-brand:hover {
+  color: rgb(114.1639344262, 170.6147540984, 253.8360655738);
+}
+.navbar .nav-link {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar .nav-link:hover {
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+.post-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+.post-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.post-card .card-body {
+  padding: 1.5rem;
+}
+.post-card .image-placeholder-custom {
+  background: linear-gradient(135deg, rgb(233.125, 236.25, 239.375), #f8f9fa);
+  min-height: 180px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post-card .image-placeholder-custom i {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #6c757d;
+  font-size: 3rem;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+}
+.post-card:hover .image-placeholder-custom i {
+  transform: scale(1.2) rotate(5deg);
+  color: #0d6efd;
+}
+
+.btn-primary {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.main-container {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.text-primary-dark {
+  color: rgb(1.5532786885, 76.887295082, 187.9467213115);
+}
+
+.margin-custom {
+  margin: 2rem;
+}/*# sourceMappingURL=main.css.map */
