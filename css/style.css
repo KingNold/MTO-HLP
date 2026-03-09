@@ -136,3 +136,12 @@ aside .card {
 .list-group-item:hover {
   background-color: #f8f9fa;
 }
+
+.image-placeholder-custom {
+    background: linear-gradient(135deg, #f1f3f5 0%, #f8f9fa 100%);
+    min-height: 180px;
+    /* Añade estas tres líneas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
